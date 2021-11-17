@@ -1,0 +1,279 @@
+// USER VARIABLES SECTION
+$main: #343235;
+$accent: #44B517;
+$grey: rgba(52, 50, 53, 0.66);
+$white: #fff;
+$black: #000;
+$red: #c51818;
+$green: #2e6f1a;
+$blue: #1A73E9;
+$yellow: #FFE76D;
+
+// GENERAL DOCUMENT STYLES
+input,
+textarea {
+    outline: transparent;
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.3; 
+    color: $main;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    padding: 0;
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-size: inherit;
+    margin: 0;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 56px;
+
+    &--sm {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 68px;
+    }
+    &--md {
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 60px;
+    }
+    &--lg {
+        font-weight: bold;
+        font-size: 56px;
+        line-height: 68px;
+    }
+}
+
+// Input number fix
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-btnon,
+input::-webkit-inner-spin-btnon {
+    -webkit-appearance: none;
+}
+// /Input number fix
+
+input, textarea {
+    display: block;
+    width: 100%;
+    background: $white;
+    border-radius: 10px;
+    border: none;
+    padding: 17px 35px;
+    margin: 0;
+    font-size: 18px;
+    color: rgba(52, 50, 53, 0.54);
+
+    &::placeholder {
+        color: inherit;
+    }
+
+    // Дополнительные классы для валидации
+    &.invalid {
+        color: $red;
+        border-color: $red;
+
+        &::placeholder {
+            color: $red;
+        }
+    }
+    &.valid {
+        color: $green;
+        border-color: $green;
+
+        &::placeholder {
+            color: $green;
+        }
+    }
+}
+
+button {
+    outline: transparent;
+    cursor: pointer;
+}
+
+textarea {
+    resize: none;
+    min-height: 150px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    display: block;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+
+    body {
+        overflow: hidden;
+    }
+}
+
+.block-scroll {
+    overflow: hidden;
+    height: 100%;
+
+    body {
+        overflow: hidden;
+        height: 100%;
+    }
+}
+
+.container {
+    max-width: 1510px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 0;
+    list-style: none;
+}
+
+.pagination {
+    ul {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+        padding-left: 0;
+        margin: -7px;
+    }
+    li {
+        margin: 7px;
+        background-color: rgba($main, .03);
+        border-radius: 50%;
+        
+        &.active {
+            background-color: $accent;
+            color: $white;
+        }
+    }
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+    }
+    
+}
+
+.preload * {
+	transition: none !important;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 45px;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .5s;
+    overflow: hidden;
+    white-space: break-spaces;
+    border: none;
+    background-color: $accent;
+    color: $white;
+}
+
+.breadcrumbs {
+    margin-bottom: 50px;
+    li {
+        display: inline;
+        line-height: 1.7;
+        &:hover {
+            text-decoration: underline;
+        }
+        & + li {
+            margin-left: 20px;
+            padding-left: 20px;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 0;
+                background-color: $main;
+                height: 22px;
+                transform: rotate(25deg);
+                width: 1px;
+            }
+        }
+        &:last-child {
+            color: #787676;
+        }
+    }
+}

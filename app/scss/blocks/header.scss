@@ -1,0 +1,66 @@
+.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 8;
+    width: 100%;
+    padding: 20px 0;
+    transition: .3s ease-in-out;
+
+    &__menu {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 10;
+        height: 100%;
+        width: calc(100% - 50px);
+        background-color: $white;
+        padding: 20px;
+        padding-right: 16px;
+        padding-bottom: 60px;
+        transform: translateX(-150%);
+        transition: .5s ease-in-out;
+    }
+
+
+    &.active {
+        .header__menu {
+            transform: translateX(0);
+        }
+    }
+    
+    &__menu-btn {
+        display: none;
+        width: 26px;
+        height: 16px;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        
+        span {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            display: block;
+            width: 26px;
+            height: 1px;
+            flex-shrink: 0;
+            transform: translateY(-50%);
+            background-color: #2E2E2E;
+            transition: .3s ease-in;
+
+            &:first-child {
+                top: calc(50% - 7px);
+            }
+            &:last-child {
+                top: auto;
+                bottom: 0;
+                width: 19px;
+                left: auto;
+                right: 0;
+            }
+        }
+    }
+}
