@@ -31,23 +31,15 @@ document.addEventListener("DOMContentLoaded", function () {
     function initMenu() {
         const $header = document.querySelector('.header');
         const $headerBtn = document.querySelector('.header__menu-btn');
-        const $headerClose = document.querySelector('.menu__close');
-        const $overlay = document.querySelector('.overlay');
 
 
         const checkScreenWidth = () => {
             // Активируем меню только на экранах <= 1280
             if (window.innerWidth <= 1280) {
-                $headerClose.addEventListener('click', () => {
-                    $header.classList.remove('active');
-                    $html.classList.remove('overflow-hidden');
-                    $overlay.classList.remove('active');
-                })
-                
                 $headerBtn.addEventListener('click', () => {
-                    $header.classList.add('active');
-                    $html.classList.add('overflow-hidden');
-                    $overlay.classList.add('active');
+                    $header.classList.toggle('active');
+                    $html.classList.toggle('overflow-hidden');
+                    $overlay.classList.toggle('active');
                 })
                 $overlay.addEventListener('click', () => {
                     $header.classList.remove('active');

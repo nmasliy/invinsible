@@ -18,11 +18,85 @@
 }
 
 @media (max-width: 1280px) {
+    .header__phones {
+        margin-left: 0;
+    }
 }
 // Laptop
 
 // Tablets 
 @media (max-width: 1024px) {
+    .header {
+        padding: 14px 0;
+        &__menu-btn {
+            display: block;
+        }
+        &__items {
+            flex-wrap: wrap;
+        }
+        &__rating {
+            padding-left: 15px;
+        }
+        &__rating-item {
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+        &__menu {
+            .header {
+                &__items {
+                    padding-left: 20px;
+                }
+                &__item {
+                    max-width: 100%;
+                    margin: 0;
+                }
+                &__phones {
+                    margin-bottom: 33px;
+                    justify-content: space-between;
+                    margin-left: -10px;
+                    margin-right: -10px;
+                    .header__item {
+                        margin-left: 10px;
+                        margin-right: 10px;
+                    }
+                }
+                &__location {
+                    margin-bottom: 28px;
+                }
+            }
+        }
+        &__inner {
+            .header {
+                &__rating {
+                    display: none;
+                }
+                &__location {
+                    display: none;
+                }
+                &__item-caption {
+                    display: none;
+                }
+                &__item {
+                    margin-left: 0;
+                    &:nth-child(2) {
+                        display: none;
+                    }
+                }
+                &__item-phone {
+                    font-size: 14px;
+                    line-height: 1.4;
+                }
+                &__item-subtitle {
+                    font-size: 8px;
+                }
+                &__items {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 800px) {
@@ -52,5 +126,13 @@
 }
 
 @media (max-width: 360px) {
+    .header {
+        &__rating-item {
+            margin-left: 8px;
+        }
+        &__rating-value {
+            font-size: 16px;
+        }
+    }
 } 
 // /Mobile phones
