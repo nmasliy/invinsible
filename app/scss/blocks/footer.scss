@@ -1,0 +1,22 @@
+.footer {
+    padding-bottom: 44px;
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.3;
+        margin-left: 87px;
+        a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}

@@ -1,0 +1,125 @@
+.contacts {
+    padding-bottom: 75px;
+    padding-top: 100px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__content {
+        width: 42%;
+    }
+
+    &__btn {
+        padding-top: 22px;
+        padding-bottom: 22px;
+        min-width: 290px;
+    }
+
+    &__title {
+        margin-bottom: 35px;
+    }
+
+    &__address {
+        margin-bottom: 15px;
+        font-weight: 500;
+        line-height: 40px;
+        font-size: 18px;
+    }
+
+    &__benefits {
+        margin-bottom: 65px;
+        max-width: 310px;
+    }
+
+    &__benefits-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 35px;
+        svg {
+            flex-shrink: 0;
+        }
+        span {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 26px;
+            margin-left: 22px;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__phones {
+        display: flex;
+        margin-bottom: 40px;
+    }
+
+    &__phones-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 70px;
+        &:first-child {
+            margin-left: 0;
+        }
+        a {
+            display: inline-block;
+            position: relative;
+            margin-bottom: 10px;
+            padding-left: 14px;
+            font-weight: 600;
+            font-size: 42px;
+            line-height: 1.1;
+            &::before {
+                position: absolute;
+                content: "";
+                top: 0;
+                width: 4px;
+                background: #1706E1;
+                left: 0;
+                height: 100%;
+            }
+        }
+        span {
+            display: inline-block;
+            padding-left: 14px;
+            font-size: 14px;
+            color: rgba(52, 50, 53, 0.52);
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -4px;
+        margin-bottom: 40px;
+    }
+
+    &__item {
+        margin: 0 4px;
+    }
+
+    &__foot {
+        display: flex;
+        align-items: center;
+        span {
+            display: block;
+            max-width: 300px;
+            font-size: 20px;
+            line-height: 29px;
+            padding-right: 30px;
+        }
+    }
+
+    &__map {
+        margin-left: 245px;
+        width: calc(58% - 245px);
+        iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+    }
+}

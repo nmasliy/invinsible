@@ -39,14 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 $headerBtn.addEventListener('click', () => {
                     $header.classList.toggle('active');
                     $html.classList.toggle('overflow-hidden');
-                    $overlay.classList.toggle('active');
                 })
-                $overlay.addEventListener('click', () => {
-                    $header.classList.remove('active');
-                    $html.classList.remove('overflow-hidden');
-                    $overlay.classList.remove('active');
-                })
-                
             }
         }
 
@@ -87,21 +80,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     function initModals() {
-        const $header = document.querySelector('.header');
         const $modals = document.querySelectorAll('.modal');
         const $modalsTriggers = document.querySelectorAll('[data-micromodal-trigger]');
-        const $modalOverlays = document.querySelectorAll('.modal__overlay');
 
-        $modalOverlays.forEach(overlay => {
-            overlay.addEventListener('click', function(e) {
-                const modalId = overlay.closest('.modal').id;
-                
-                if (e.target.classList.contains('modal__container') || e.target.classList.contains('modal__overlay')) {
-                    MicroModal.close(modalId);
-                }
-            })
-        })
-        
         $modalsTriggers.forEach(item => {
             item.addEventListener('click', (e) => e.preventDefault());
         })
@@ -109,15 +90,16 @@ document.addEventListener("DOMContentLoaded", function () {
         if ($modals.length > 0) {
             MicroModal.init({
                 onShow: (modal) => {
-                    hideScroll();
-                    $header.style.pointerEvents = 'none';
+                    // hideScroll();
                 },
                 onClose: (modal) => {
-                    showScroll();
-                    setTimeout(() => $header.style.pointerEvents = '', 500)
+                    // showScroll();
                 },
                 disableFocus: true,
                 openClass: 'is-open', 
+                awaitOpenAnimation: true, 
+                awaitCloseAnimation: true, 
+                disableScroll: true
             });
         }
     }
@@ -133,10 +115,117 @@ document.addEventListener("DOMContentLoaded", function () {
 
         $phones.forEach(item => {
             IMask(item, {
-                    mask: '000-00-00-00' 
+                mask: '000-00-00-00' 
             });
         })
+    }
 
+    function initQuestionsAccordion() {
+        const $triggers = document.querySelectorAll('.questions__item-head');
+        
+        if ($triggers.length > 0) {
+            
+            $triggers.forEach(item => {
+                item.addEventListener('click', function() {
+                    item.closest('.questions__item').classList.toggle('active');
+                })
+            })
+        }
+    }
+
+    function initShowMore() {
+        const $buttons = document.querySelectorAll('.more-btn');
+
+        if ($buttons.length > 0) {
+            $buttons.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    if (item.closest('.more-wrapper').classList.contains('active')) {
+                        item.textContent = '+ Смотреть ещё';
+                        item.closest('.more-wrapper').classList.remove('active');
+                    }
+                    else {
+                        item.textContent = '- Показать меньше';
+                        item.closest('.more-wrapper').classList.add('active');
+                    }
+                })
+            })
+        }
+    }
+
+    function initStarRating() {
+        const $rating = document.querySelectorAll('.star-rating');
+
+        if ($rating.length > 0) {
+            $rating.forEach(item => {
+                const $ratingBar = item.querySelector('.star-rating__active');
+                const ratingValue = item.querySelector('.star-rating__value').dataset.starRatingValue || item.querySelector('.star-rating__value').textContent;
+
+                const value = (ratingValue * 10) * 2;
+
+                $ratingBar.style.width = value + '%';
+            })
+        }
+    }
+
+    function initDeviceSlider() {
+        if (document.querySelector('.device-slider')) {
+            const thumbs = new Swiper(".device-thumbs", {
+                spaceBetween: 14,
+                slidesPerView: 'auto',
+                direction: 'vertical',
+                breakpoints: {
+                    320: {
+                        direction: 'horizontal',
+                    },
+                    1024: {
+                        direction: 'vertical',
+                    }
+                },
+            });
+            const deviceSlider = new Swiper(".device-slider", {
+                spaceBetween: 30,
+                slidesPerView: 1,
+                thumbs: {
+                    swiper: thumbs,
+                },
+            });
+            deviceSlider.on('slideChange', function () {
+                const $players = document.querySelectorAll('.device-slider__item--video iframe');
+                if ($players.length > 0) {
+                    $players.forEach(item => {
+                        var iframeSrc = item.src;
+                        item.src = iframeSrc;
+                    });
+                }
+            });
+        }
+    }
+
+    function initCartSubmit() {
+        const $cartBtn = document.querySelector('.device-cart__btn');
+
+        if ($cartBtn) {
+            const $deviceDefenseTypeInput = document.querySelector('#deviceDefenseType');
+            const $deviceMaterialTypeInput = document.querySelector('#deviceMaterialType');
+            const $deviceCountInput = document.querySelector('#deviceCount');
+            const $devicePriceInput = document.querySelector('#devicePrice');
+
+            $cartBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const count = document.querySelector('.device-cart__counter-value').dataset.deviceCount;
+                const price = document.querySelector('.device-cart__price').dataset.devicePrice;
+                const defenseType = document.querySelector('.device-boxes__item input:checked').value;
+                const materialType = document.querySelector('.device-materials__item input:checked').value;
+                
+                $deviceDefenseTypeInput.value = count;
+                $deviceMaterialTypeInput.value = price;
+                $deviceCountInput.value = defenseType;
+                $devicePriceInput.value = materialType;
+            })
+        }
     }
 
     disableTransitionsBeforePageLoading();
@@ -144,7 +233,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     initModals();
     initPhoneMasks();
+    initStarRating();
+    initShowMore();
 
     initWorksSlider();
-
+    initQuestionsAccordion();
+    initDeviceSlider();
+    initCartSubmit();
 });

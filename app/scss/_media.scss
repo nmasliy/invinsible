@@ -3,14 +3,46 @@
 
 // Hover section
 @media (min-width: 1025px) {
+    .btn {
+        transition: .3s ease-in-out;
+        &:hover {
+            background-color: #3a9e13;
+        }
+    }
+    .box-section__btn {
+        transition: .3s ease-in-out;
+        &:hover {
+            background-color: #1307a0;
+        }
+    }
 }
 // /Hover section
 
 
 @media (max-width: 1600px) {
+    .hero {
+        background: url('../images/dist/hero-bg.png') bottom -250px left -300px no-repeat;
+    }
 }
 
 @media (max-width: 1440px) {
+    .hero {
+        &__benefits-list {
+            margin-right: 0;
+        }
+    }
+    .contacts {
+        &__content {
+            width: 45%;
+        }
+        &__map {
+            margin-left: 70px;
+            width: calc(55% - 70px);
+        }
+        &__phones-item a {
+            font-size: 30px;
+        }
+    }
 }
 
 // Laptop
@@ -18,14 +50,477 @@
 }
 
 @media (max-width: 1280px) {
+    .defense {
+        &__device {
+            margin-left: -200px;
+        }
+    }
+    .contacts {
+        padding-top: 30px;
+        padding-bottom: 20px;
+        &__inner {
+            flex-direction: column;
+        }
+        &__content {
+            width: 100%;
+            margin-bottom: 50px;
+        }
+        &__btn {
+            min-width: auto;
+        }
+        &__map {
+            width: 100%;
+            margin: 0;
+            position: relative;
+            padding-bottom: 56.25%; 
+            height: 0;
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
     .header__phones {
         margin-left: 0;
     }
+}
+@media (max-width: 1200px) {
+    .device-slider {
+        height: 400px;
+    }
+    .device {
+        &__sliders {
+            margin-right: 50px;
+            width: 40%;
+        }
+        &__info {
+            width: calc(60% - 50px);
+        }
+    }
+    .questions {
+        &__list {
+            padding-bottom: 23px;
+        }
+        &__more-btn {
+            font-size: 12px;
+            padding-bottom: 3px;
+        }
+        &__title {
+            margin-bottom: 30px;
+        }
+        &__form-title {
+            font-size: 20px;
+            line-height: 32px;
+        }
+        &__content {
+            margin-right: 40px;
+            width: calc(60% - 40px);
+        }
+        &__form {
+            width: 40%;
+            padding: 40px 20px;
+        }
+        &__item-btn::after,
+        &__item-btn::before {
+            width: 9px;
+        }
+        &__item-head {
+            font-size: 14px;
+            line-height: 24px;
+            padding: 15px 0;
+        }
+    }
+    .discount {
+        padding: 40px 0;
+        &__list {
+            margin: 0 -15px;
+        }
+        &__item {
+            padding: 28px 20px;
+            margin: 0 15px;
+            width: calc(50% - 30px);
+        }
+        &__title {
+            font-size: 22px;
+        }
+        &__subtitle {
+            font-size: 12px;
+            line-height: 16px;
+            margin-bottom: 10px;
+        }
+        &__head {
+            margin-bottom: 28px;
+            span {
+                font-size: 14px;
+            }
+        }
+        &__price {
+            font-size: 36px;
+            line-height: 40px;
+            span {
+                font-size: 22px;
+                line-height: 40px;
+                margin-left: 5px;
+            }
+        }
+    }
+    .hero {
+        background: url('../images/dist/hero-bg.png') bottom -250px left -500px no-repeat;
+    }
+    .title {
+        &--sm {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 27px;
+        }
+        font-size: 18px;
+        line-height: 25px;
+        &--lg {
+            font-size: 28px;
+            line-height: 42px;
+        }
+        &--md {
+            font-size: 24px;
+            line-height: 35px;
+        }
+
+    }
+    .reviews__title {
+        font-size: 24px;
+        line-height: 1.2;
+    }
+    .box-section {
+        padding: 27px 16px;
+        padding-top: 44px;
+        align-items: center;
+
+        &__btn {
+            font-size: 12px;
+            padding: 12px 20px 12px 16px;
+            left: -15px;
+            top: -17px;
+            span {
+                margin-left: 10px;
+            }
+            svg {
+                width: 6px;
+            }
+        }
+
+        &__text {
+            font-size: 12px;
+            line-height: 19px;
+        }
+    }
+
+    .translation {
+        &__inner {
+            align-items: flex-end;
+        }
+        &__box {
+            padding: 22px 25px;
+        }
+        &__subtitle {
+            margin-bottom: 15px;
+        }
+        &__box-item {
+            font-size: 12px;
+            line-height: 20px;
+        }
+        &__box-head {
+            margin-bottom: 22px;
+            span {
+                font-size: 14px;
+            }
+            svg {
+                width: 30px;
+                margin-right: 14px;
+            }
+        }
+    }
+
 }
 // Laptop
 
 // Tablets 
 @media (max-width: 1024px) {
+    .gallery {
+        &__title {
+            margin-bottom: 15px;
+        }
+        &__list {
+            margin: -7px -6px;
+        }
+        &__item {
+            width: calc(25% - 12px);
+            margin: 7px 6px;
+        }
+        &__subtitle {
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            margin-bottom: 18px;
+            span {
+                font-size: 10px;
+                margin-right: 9px;
+                margin-left: 0;
+            }
+            svg {
+                width: 22px;
+                height: auto;
+            }
+        }
+    }
+    .defense {
+        padding-top: 47px;
+        &__subtitle {
+            text-align: left;
+            margin-left: 170px;
+        }
+        &__device {
+            margin-left: -500px;
+        }
+        &__img {
+            margin-top: -247px;
+        }
+    }
+    .star-rating {
+        &__body {
+            &::before {
+                width: 83px;
+                height: 16px;
+                background-image: url("data:image/svg+xml,%3Csvg width='83' height='16' viewBox='0 0 83 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M45.6924 9.54699C45.5089 9.71432 45.4246 9.95632 45.4664 10.1937L46.0961 13.4737C46.1492 13.7517 46.0246 14.033 45.7774 14.1937C45.5351 14.3603 45.2128 14.3803 44.9486 14.247L41.8114 12.707C41.7023 12.6523 41.5812 12.623 41.4572 12.6197H41.2653C41.1987 12.629 41.1335 12.649 41.074 12.6797L37.9361 14.227C37.781 14.3003 37.6053 14.3263 37.4332 14.3003C37.0139 14.2257 36.7341 13.8497 36.8028 13.453L37.4332 10.173C37.475 9.93366 37.3907 9.69032 37.2072 9.52032L34.6495 7.18699C34.4355 6.99166 34.3612 6.69833 34.4589 6.43366C34.5538 6.16966 34.7961 5.97699 35.0886 5.93366L38.609 5.45299C38.8768 5.42699 39.112 5.27366 39.2324 5.04699L40.7836 2.05366C40.8205 1.98699 40.8679 1.92566 40.9253 1.87366L40.989 1.82699C41.0223 1.79233 41.0606 1.76366 41.1031 1.74033L41.1803 1.71366L41.3007 1.66699H41.5989C41.8652 1.69299 42.0997 1.84299 42.2222 2.06699L43.794 5.04699C43.9074 5.26499 44.1277 5.41633 44.382 5.45299L47.9024 5.93366C48.1999 5.97366 48.4485 6.16699 48.547 6.43366C48.6397 6.70099 48.5597 6.99433 48.3415 7.18699L45.6924 9.54699Z' fill='%23D3D8D0'/%3E%3Cpath d='M11.9456 9.54699C11.7729 9.71432 11.6936 9.95632 11.7329 10.1937L12.3256 13.4737C12.3756 13.7517 12.2583 14.033 12.0256 14.1937C11.7976 14.3603 11.4943 14.3803 11.2456 14.247L8.29292 12.707C8.19026 12.6523 8.07626 12.623 7.95959 12.6197H7.77892C7.71626 12.629 7.65492 12.649 7.59892 12.6797L4.64559 14.227C4.49959 14.3003 4.33426 14.3263 4.17226 14.3003C3.77759 14.2257 3.51426 13.8497 3.57892 13.453L4.17226 10.173C4.21159 9.93366 4.13226 9.69032 3.95959 9.52032L1.55226 7.18699C1.35093 6.99166 1.28093 6.69833 1.37293 6.43366C1.46226 6.16966 1.69026 5.97699 1.96559 5.93366L5.27892 5.45299C5.53092 5.42699 5.75226 5.27366 5.86559 5.04699L7.32559 2.05366C7.36026 1.98699 7.40492 1.92566 7.45892 1.87366L7.51892 1.82699C7.55026 1.79233 7.58626 1.76366 7.62626 1.74033L7.69892 1.71366L7.81226 1.66699H8.09292C8.34359 1.69299 8.56426 1.84299 8.67959 2.06699L10.1589 5.04699C10.2656 5.26499 10.4729 5.41633 10.7123 5.45299L14.0256 5.93366C14.3056 5.97366 14.5396 6.16699 14.6323 6.43366C14.7196 6.70099 14.6443 6.99433 14.4389 7.18699L11.9456 9.54699Z' fill='%23D3D8D0'/%3E%3Cpath d='M28.9456 9.54699C28.7729 9.71432 28.6936 9.95632 28.7329 10.1937L29.3256 13.4737C29.3756 13.7517 29.2583 14.033 29.0256 14.1937C28.7976 14.3603 28.4943 14.3803 28.2456 14.247L25.2929 12.707C25.1903 12.6523 25.0763 12.623 24.9596 12.6197H24.7789C24.7163 12.629 24.6549 12.649 24.5989 12.6797L21.6456 14.227C21.4996 14.3003 21.3343 14.3263 21.1723 14.3003C20.7776 14.2257 20.5143 13.8497 20.5789 13.453L21.1723 10.173C21.2116 9.93366 21.1323 9.69032 20.9596 9.52032L18.5523 7.18699C18.3509 6.99166 18.2809 6.69833 18.3729 6.43366C18.4623 6.16966 18.6903 5.97699 18.9656 5.93366L22.2789 5.45299C22.5309 5.42699 22.7523 5.27366 22.8656 5.04699L24.3256 2.05366C24.3603 1.98699 24.4049 1.92566 24.4589 1.87366L24.5189 1.82699C24.5503 1.79233 24.5863 1.76366 24.6263 1.74033L24.6989 1.71366L24.8123 1.66699H25.0929C25.3436 1.69299 25.5643 1.84299 25.6796 2.06699L27.1589 5.04699C27.2656 5.26499 27.4729 5.41633 27.7123 5.45299L31.0256 5.93366C31.3056 5.97366 31.5396 6.16699 31.6323 6.43366C31.7196 6.70099 31.6443 6.99433 31.4389 7.18699L28.9456 9.54699Z' fill='%23D3D8D0'/%3E%3Cpath d='M61.9456 9.54699C61.7729 9.71432 61.6936 9.95632 61.7329 10.1937L62.3256 13.4737C62.3756 13.7517 62.2583 14.033 62.0256 14.1937C61.7976 14.3603 61.4943 14.3803 61.2456 14.247L58.2929 12.707C58.1903 12.6523 58.0763 12.623 57.9596 12.6197H57.7789C57.7163 12.629 57.6549 12.649 57.5989 12.6797L54.6456 14.227C54.4996 14.3003 54.3343 14.3263 54.1723 14.3003C53.7776 14.2257 53.5143 13.8497 53.5789 13.453L54.1723 10.173C54.2116 9.93366 54.1323 9.69032 53.9596 9.52032L51.5523 7.18699C51.3509 6.99166 51.2809 6.69833 51.3729 6.43366C51.4623 6.16966 51.6903 5.97699 51.9656 5.93366L55.2789 5.45299C55.5309 5.42699 55.7523 5.27366 55.8656 5.04699L57.3256 2.05366C57.3603 1.98699 57.4049 1.92566 57.4589 1.87366L57.5189 1.82699C57.5503 1.79233 57.5863 1.76366 57.6263 1.74033L57.6989 1.71366L57.8123 1.66699H58.0929C58.3436 1.69299 58.5643 1.84299 58.6796 2.06699L60.1589 5.04699C60.2656 5.26499 60.4729 5.41633 60.7123 5.45299L64.0256 5.93366C64.3056 5.97366 64.5396 6.16699 64.6323 6.43366C64.7196 6.70099 64.6443 6.99433 64.4389 7.18699L61.9456 9.54699Z' fill='%23D3D8D0'/%3E%3Cpath d='M78.9456 9.54699C78.7729 9.71432 78.6936 9.95632 78.7329 10.1937L79.3256 13.4737C79.3756 13.7517 79.2583 14.033 79.0256 14.1937C78.7976 14.3603 78.4943 14.3803 78.2456 14.247L75.2929 12.707C75.1903 12.6523 75.0763 12.623 74.9596 12.6197H74.7789C74.7163 12.629 74.6549 12.649 74.5989 12.6797L71.6456 14.227C71.4996 14.3003 71.3343 14.3263 71.1723 14.3003C70.7776 14.2257 70.5143 13.8497 70.5789 13.453L71.1723 10.173C71.2116 9.93366 71.1323 9.69032 70.9596 9.52032L68.5523 7.18699C68.3509 6.99166 68.2809 6.69833 68.3729 6.43366C68.4623 6.16966 68.6903 5.97699 68.9656 5.93366L72.2789 5.45299C72.5309 5.42699 72.7523 5.27366 72.8656 5.04699L74.3256 2.05366C74.3603 1.98699 74.4049 1.92566 74.4589 1.87366L74.5189 1.82699C74.5503 1.79233 74.5863 1.76366 74.6263 1.74033L74.6989 1.71366L74.8123 1.66699H75.0929C75.3436 1.69299 75.5643 1.84299 75.6796 2.06699L77.1589 5.04699C77.2656 5.26499 77.4729 5.41633 77.7123 5.45299L81.0256 5.93366C81.3056 5.97366 81.5396 6.16699 81.6323 6.43366C81.7196 6.70099 81.6443 6.99433 81.4389 7.18699L78.9456 9.54699Z' fill='%23D3D8D0'/%3E%3C/svg%3E%0A");
+            }
+        }
+        &__text {
+            font-size: 12px;
+        }
+        &__active {
+            &::before {
+                width: 83px;
+                height: 16px;
+                background-image: url("data:image/svg+xml,%3Csvg width='83' height='16' viewBox='0 0 83 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M45.6924 9.54699C45.5089 9.71432 45.4246 9.95632 45.4664 10.1937L46.0961 13.4737C46.1492 13.7517 46.0246 14.033 45.7774 14.1937C45.5351 14.3603 45.2128 14.3803 44.9486 14.247L41.8114 12.707C41.7023 12.6523 41.5812 12.623 41.4572 12.6197H41.2653C41.1987 12.629 41.1335 12.649 41.074 12.6797L37.9361 14.227C37.781 14.3003 37.6053 14.3263 37.4332 14.3003C37.0139 14.2257 36.7341 13.8497 36.8028 13.453L37.4332 10.173C37.475 9.93366 37.3907 9.69032 37.2072 9.52032L34.6495 7.18699C34.4355 6.99166 34.3612 6.69833 34.4589 6.43366C34.5538 6.16966 34.7961 5.97699 35.0886 5.93366L38.609 5.45299C38.8768 5.42699 39.112 5.27366 39.2324 5.04699L40.7836 2.05366C40.8205 1.98699 40.8679 1.92566 40.9253 1.87366L40.989 1.82699C41.0223 1.79233 41.0606 1.76366 41.1031 1.74033L41.1803 1.71366L41.3007 1.66699H41.5989C41.8652 1.69299 42.0997 1.84299 42.2222 2.06699L43.794 5.04699C43.9074 5.26499 44.1277 5.41633 44.382 5.45299L47.9024 5.93366C48.1999 5.97366 48.4485 6.16699 48.547 6.43366C48.6397 6.70099 48.5597 6.99433 48.3415 7.18699L45.6924 9.54699Z' fill='%2344B517'/%3E%3Cpath d='M11.9456 9.54699C11.7729 9.71432 11.6936 9.95632 11.7329 10.1937L12.3256 13.4737C12.3756 13.7517 12.2583 14.033 12.0256 14.1937C11.7976 14.3603 11.4943 14.3803 11.2456 14.247L8.29292 12.707C8.19026 12.6523 8.07626 12.623 7.95959 12.6197H7.77892C7.71626 12.629 7.65492 12.649 7.59892 12.6797L4.64559 14.227C4.49959 14.3003 4.33426 14.3263 4.17226 14.3003C3.77759 14.2257 3.51426 13.8497 3.57892 13.453L4.17226 10.173C4.21159 9.93366 4.13226 9.69032 3.95959 9.52032L1.55226 7.18699C1.35093 6.99166 1.28093 6.69833 1.37293 6.43366C1.46226 6.16966 1.69026 5.97699 1.96559 5.93366L5.27892 5.45299C5.53092 5.42699 5.75226 5.27366 5.86559 5.04699L7.32559 2.05366C7.36026 1.98699 7.40492 1.92566 7.45892 1.87366L7.51892 1.82699C7.55026 1.79233 7.58626 1.76366 7.62626 1.74033L7.69892 1.71366L7.81226 1.66699H8.09292C8.34359 1.69299 8.56426 1.84299 8.67959 2.06699L10.1589 5.04699C10.2656 5.26499 10.4729 5.41633 10.7123 5.45299L14.0256 5.93366C14.3056 5.97366 14.5396 6.16699 14.6323 6.43366C14.7196 6.70099 14.6443 6.99433 14.4389 7.18699L11.9456 9.54699Z' fill='%2344B517'/%3E%3Cpath d='M28.9456 9.54699C28.7729 9.71432 28.6936 9.95632 28.7329 10.1937L29.3256 13.4737C29.3756 13.7517 29.2583 14.033 29.0256 14.1937C28.7976 14.3603 28.4943 14.3803 28.2456 14.247L25.2929 12.707C25.1903 12.6523 25.0763 12.623 24.9596 12.6197H24.7789C24.7163 12.629 24.6549 12.649 24.5989 12.6797L21.6456 14.227C21.4996 14.3003 21.3343 14.3263 21.1723 14.3003C20.7776 14.2257 20.5143 13.8497 20.5789 13.453L21.1723 10.173C21.2116 9.93366 21.1323 9.69032 20.9596 9.52032L18.5523 7.18699C18.3509 6.99166 18.2809 6.69833 18.3729 6.43366C18.4623 6.16966 18.6903 5.97699 18.9656 5.93366L22.2789 5.45299C22.5309 5.42699 22.7523 5.27366 22.8656 5.04699L24.3256 2.05366C24.3603 1.98699 24.4049 1.92566 24.4589 1.87366L24.5189 1.82699C24.5503 1.79233 24.5863 1.76366 24.6263 1.74033L24.6989 1.71366L24.8123 1.66699H25.0929C25.3436 1.69299 25.5643 1.84299 25.6796 2.06699L27.1589 5.04699C27.2656 5.26499 27.4729 5.41633 27.7123 5.45299L31.0256 5.93366C31.3056 5.97366 31.5396 6.16699 31.6323 6.43366C31.7196 6.70099 31.6443 6.99433 31.4389 7.18699L28.9456 9.54699Z' fill='%2344B517'/%3E%3Cpath d='M61.9456 9.54699C61.7729 9.71432 61.6936 9.95632 61.7329 10.1937L62.3256 13.4737C62.3756 13.7517 62.2583 14.033 62.0256 14.1937C61.7976 14.3603 61.4943 14.3803 61.2456 14.247L58.2929 12.707C58.1903 12.6523 58.0763 12.623 57.9596 12.6197H57.7789C57.7163 12.629 57.6549 12.649 57.5989 12.6797L54.6456 14.227C54.4996 14.3003 54.3343 14.3263 54.1723 14.3003C53.7776 14.2257 53.5143 13.8497 53.5789 13.453L54.1723 10.173C54.2116 9.93366 54.1323 9.69032 53.9596 9.52032L51.5523 7.18699C51.3509 6.99166 51.2809 6.69833 51.3729 6.43366C51.4623 6.16966 51.6903 5.97699 51.9656 5.93366L55.2789 5.45299C55.5309 5.42699 55.7523 5.27366 55.8656 5.04699L57.3256 2.05366C57.3603 1.98699 57.4049 1.92566 57.4589 1.87366L57.5189 1.82699C57.5503 1.79233 57.5863 1.76366 57.6263 1.74033L57.6989 1.71366L57.8123 1.66699H58.0929C58.3436 1.69299 58.5643 1.84299 58.6796 2.06699L60.1589 5.04699C60.2656 5.26499 60.4729 5.41633 60.7123 5.45299L64.0256 5.93366C64.3056 5.97366 64.5396 6.16699 64.6323 6.43366C64.7196 6.70099 64.6443 6.99433 64.4389 7.18699L61.9456 9.54699Z' fill='%2344B517'/%3E%3Cpath d='M78.9456 9.54699C78.7729 9.71432 78.6936 9.95632 78.7329 10.1937L79.3256 13.4737C79.3756 13.7517 79.2583 14.033 79.0256 14.1937C78.7976 14.3603 78.4943 14.3803 78.2456 14.247L75.2929 12.707C75.1903 12.6523 75.0763 12.623 74.9596 12.6197H74.7789C74.7163 12.629 74.6549 12.649 74.5989 12.6797L71.6456 14.227C71.4996 14.3003 71.3343 14.3263 71.1723 14.3003C70.7776 14.2257 70.5143 13.8497 70.5789 13.453L71.1723 10.173C71.2116 9.93366 71.1323 9.69032 70.9596 9.52032L68.5523 7.18699C68.3509 6.99166 68.2809 6.69833 68.3729 6.43366C68.4623 6.16966 68.6903 5.97699 68.9656 5.93366L72.2789 5.45299C72.5309 5.42699 72.7523 5.27366 72.8656 5.04699L74.3256 2.05366C74.3603 1.98699 74.4049 1.92566 74.4589 1.87366L74.5189 1.82699C74.5503 1.79233 74.5863 1.76366 74.6263 1.74033L74.6989 1.71366L74.8123 1.66699H75.0929C75.3436 1.69299 75.5643 1.84299 75.6796 2.06699L77.1589 5.04699C77.2656 5.26499 77.4729 5.41633 77.7123 5.45299L81.0256 5.93366C81.3056 5.97366 81.5396 6.16699 81.6323 6.43366C81.7196 6.70099 81.6443 6.99433 81.4389 7.18699L78.9456 9.54699Z' fill='%2344B517'/%3E%3C/svg%3E%0A");
+            }
+        }
+    }
+    .device-info {
+        &__file {
+            font-size: 12px;
+            svg {
+                width: 16px;
+                height: auto;
+            }
+            span {
+                font-size: 12px;
+            }
+        }
+        &__title {
+            font-size: 16px;
+        }
+    }
+    .device-materials {
+        &__status {
+            margin-bottom: 20px;
+            font-size: 12px;
+            svg {
+                width: 14px;
+                height: auto;
+            }
+        }
+        &__list {
+            margin: -5px;
+        }
+        &__item {
+            margin: 5px;
+        }
+        &__item-inner {
+            font-size: 12px;
+            padding: 14px 22px;
+        }
+    }
+    .device-cart {
+        &__counter-value {
+            margin: 0 14px;
+        }
+        &__counter-btn {
+            width: 30px;
+            height: 30px;
+        }
+        &__price {
+            font-size: 18px;
+        }
+    }
+    .device-boxes {
+        &__item-inner {
+            padding: 20px;
+        }
+        &__title {
+            font-size: 14px;
+            font-weight: 700;
+        }
+        &__desc {
+            font-size: 12px;
+            line-height: 19px;
+        }
+        &__price {
+            font-size: 16px;
+        }
+        &__price-old {
+            font-size: 14px;
+        }
+        &__icon {
+            svg {
+                width: 13px;
+                height: auto;
+            }
+        }
+    }
+    .device {
+        padding-bottom: 31px;
+        &__sliders {
+            flex-direction: column-reverse;
+        }
+    }
+    .device-slider {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 13px;
+        height: 365px;
+    }
+    .device-thumbs {
+        width: 100%;
+        &__item {
+            height: 57px;
+            width: 59px;
+        }
+    }
+
+    .defense {
+        &__video {
+            position: relative;
+            padding-bottom: 56.25%; 
+            height: 0;
+    
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .modal-error {
+        .modal__btn {
+            width: auto;
+        }
+    }
+    .modal-error, .modal-callback, .modal-discounts {
+        .modal__title {
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+    .modal {
+        &__text {
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        &__btn {
+            width: 100%;
+        }
+        &__form-item {
+            span {
+                font-size: 12px;
+                line-height: 22px;
+            }
+            input {
+                font-size: 12px;
+                padding: 20px 16px;
+            }
+        }
+        &__title {
+            font-size: 18px;
+            line-height: 25px;
+            margin: 0 auto;
+            margin-bottom: 15px;
+            padding: 0;
+        }
+        &__inner {
+            padding: 15px;
+            padding-top: 26px;
+            padding-bottom: 30px;
+        }
+    }
+    .questions {
+        padding-bottom: 74px;
+        padding-top: 40px;
+    }
+    .box-section {
+        &__content {
+            width: calc(50% - 25px);
+            margin-right: 50px;
+        }
+        &__video {
+            width: calc(50% - 25px);
+        }
+    }
+    .translation {
+        padding: 40px 0;
+        &__title {
+            margin-bottom: 18px;
+        }
+    }
+    .garanty {
+        padding: 27px 0;
+        &__subtitle {
+            margin-bottom: 15px;
+        }
+    }
+    .main {
+        padding-top: 15px;
+    }
+    .btn {
+        font-size: 14px;
+    }
+    .hero {
+        background: url('../images/dist/hero-bg.png') bottom -250px left -600px no-repeat;
+        padding-top: 5px;
+        &__benefits-list {
+            margin-left: auto;
+            max-width: 680px;
+        }
+        &__benefits-item {
+            margin: 12px;
+        }
+        &__form-select {
+            display: none;
+        }
+        &__form-btn {
+            display: none;
+            width: 100%;
+        }
+        &__form-btn-modal {
+            display: block;
+        }
+        &__caption {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        &__subtitle {
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+        &__form {
+            max-width: 260px;
+            margin: 0 auto;
+            form {
+                justify-content: center;
+            }
+        }
+    }
     .header {
         padding: 14px 0;
         &__menu-btn {
@@ -56,12 +551,14 @@
                     justify-content: space-between;
                     margin-left: -10px;
                     margin-right: -10px;
+                    flex-grow: 1;
                     .header__item {
                         margin-left: 10px;
                         margin-right: 10px;
                     }
                 }
                 &__location {
+                    width: 100%;
                     margin-bottom: 28px;
                 }
             }
@@ -99,30 +596,534 @@
     }
 }
 
-@media (max-width: 800px) {
+@media(max-width: 900px) {
+    .device {
+        &__inner {
+            flex-direction: column;
+        }
+        &__sliders {
+            width: 100%;
+            margin: 0;
+            margin-bottom: 30px;
+        }
+        &__info {
+            width: 100%;
+        }
+    }
+    .device-thumbs {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .device-slider {
+        max-width: 400px;
+        margin: 0 auto;
+        margin-bottom: 13px;
+    }
+   
+    .hero {
+        background: url('../images/dist/hero-bg.png') bottom -80px left -650px no-repeat;
+        padding-bottom: 40px;
+
+        &__benefits-list {
+            flex-direction: column;
+            margin: 0;
+            margin-left: 170px;
+        }
+        &__benefits-item {
+            width: 100%;
+            margin: 0;
+            margin-bottom: 24px;
+        }
+        &__benefits {
+            min-height: auto;
+            padding-top: 77px;
+        }
+    }
 }
 
-@media(max-width: 900px) {
+@media (max-width: 800px) {
+    .reviews {
+        &__title {
+            margin-bottom: 13px;
+        }
+        &__head {
+            display: block;
+            margin-bottom: 24px;
+        }
+        &__caption {
+            margin-bottom: 0;
+            font-size: 10px;
+            line-height: 2;
+        }
+        &__socials {
+            display: flex;
+            align-items: center;
+            li svg {
+                width: 22px;
+            }
+            &-list {
+                margin-left: 12px;
+            }
+        }
+    }
 }
 
 @media (max-width: 768px) {
+    .gallery {
+        &__item {
+            width: calc(33.3333% - 12px);
+        }
+    }
+    .defense {
+        &__video-title {
+            margin-bottom: 20px;
+        }
+        &__img {
+            margin-top: -150px;
+        }
+        &__device {
+            margin-bottom: -100px;
+            margin-left: -300px;
+            img {
+                width: 560px;
+            }
+        }
+        &__subtitle {
+            font-size: 12px;
+            line-height: 19px;
+        }
+        &__caption-item {
+            font-size: 12px;
+            line-height: 18px;
+            margin-bottom: 18px;
+            span {
+                margin-left: 8px;
+            } 
+            &::before {
+                display: block;
+                content: "";
+                top: 0;
+                height: 1px;
+                border: 1px dashed $accent;
+                width: 18px;
+            }
+            &:first-child {
+                &::before {
+                    margin-left: 0;
+                }
+            }
+            &:nth-child(2) {
+                &::before {
+                    width: 35px;
+                    margin-left: -33px;
+                }
+    
+            }
+            &:nth-child(3) {
+                margin-bottom: 15px;
+                &::before {
+                    width: 50px;
+                    margin-left: -54px;
+                }
+            }
+            &:last-child {
+                &::before {
+                    width: 64px;
+                    margin-left: -71px;
+                }
+                margin-bottom: 0;
+            }
+        }
+        &__captions {
+            right: -162px;
+            bottom: 166px;
+            
+        }
+    }
+    .device-boxes {
+        &__item-inner {
+            border-radius: 5px;
+            &::before {
+                left: 0;
+                width: 2px;
+                height: 91%;
+            }
+        }
+    }
+    .device-materials {
+        border-radius: 5px;
+        &__item-inner {
+            &::before {
+                height: 70%;
+            }
+        }
+    }
+    .modal {
+        &__img {
+            img {
+                width: 55px;
+            }
+        }
+    }
+    .footer {
+        padding-bottom: 28px;
+    }
+    .contacts {
+        &__title {
+            margin-bottom: 15px;
+        }
+        &__foot {
+            span {
+                font-size: 12px;
+                line-height: 29px;
+                padding-right: 0;
+            }
+        }
+        &__list {
+            margin-bottom: 25px;
+        }
+        &__item {
+            svg {
+                width: 29px;
+                height: auto;
+            }
+        }
+        &__address {
+            font-size: 12px;
+            line-height: 24px;
+        }
+        &__benefits {
+            margin-bottom: 42px;
+            max-width: 100%;
+        }
+        &__benefits-item {
+            margin-bottom: 25px;
+            svg {
+                width: 32px;
+                height: auto;
+            }
+            span {
+                font-size: 12px;
+                line-height: 19px;
+                margin-left: 10px;
+                padding-right: 35px;
+            }
+        }
+        &__phones {
+            justify-content: space-between;
+        }
+        &__phones-item {
+            a {
+                font-size: 24px;
+                line-height: 26px;
+            }
+            font-size: 10px;
+        }
+        &__foot {
+            justify-content: space-between;
+            span {
+                width: 50%;
+            }
+        }
+        &__btn {
+            width: 50%;
+        }
+    }
+    .questions {
+        &__btn-wrapper {
+            display: block;
+            margin-top: 35px;
+        }
+        &__form {
+            display: none;
+        }
+        &__content {
+            margin-right: 0;
+            width: 100%;
+        }
+    }
+    .logo {
+        img {
+            width: 147px;
+        }
+    }
+    .btn {
+        padding: 15px 30px;
+        border-radius: 7px;
+    }
 }
 
 @media (max-width: 700px) {
+    .garanty__box-btn {
+        padding: 12px;
+    }
+    .translation__box {
+        max-width: 100%;
+    }
+    .box-section {
+        &__video {
+            width: auto;
+        }
+        &__content {
+            margin: 0;
+            margin-bottom: 40px;
+            width: auto;
+        }
+    }
 } 
 
 @media (max-width: 640px) {
 }
 @media(max-width: 600px) {
+    .contacts {
+        &__foot {
+            flex-direction: column;
+            align-items: flex-start;
+            span {
+                width: auto;
+                margin-bottom: 15px;
+            }
+        }
+        &__btn {
+            width: auto;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
+    .reviews {
+        &__list {
+            margin: 0;
+        }
+        &__item {
+            width: 100%;
+            margin: 0;
+            margin-bottom: 14px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .footer {
+        &__item {
+            margin-left: 0;
+            margin-bottom: 10px;
+            text-align: center;
+            flex-grow: 1;
+            font-weight: 500;
+            font-size: 12px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .discount {
+        &__list {
+            margin: 0;
+        }
+        &__item {
+            width: 100%;
+            margin: 0;
+            margin-bottom: 20px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .hero {
+        background: url('../images/dist/hero-bg.png') bottom -20px left -367px no-repeat;
+        background-size: 760px;
+
+        &__benefits {
+            max-width: 220px;
+            margin-left: auto;
+        }
+        &__benefits-list {
+            margin-left: auto;
+        }
+        &__benefits-title {
+            font-size: 14px;
+        }
+        &__benefits-text {
+            font-size: 12px;
+        }
+        &__benefits-item {
+            width: 100%;
+            margin: 0;
+            margin-bottom: 24px;
+            svg {
+                margin-bottom: 10px;
+            }
+        }
+    }
 }
 // /Tablets 
 
 // Mobile phones
 @media (max-width: 480px) {
+    .gallery {
+        &__item {
+            width: calc(50% - 12px);
+            &:nth-child(6) ~.gallery__item {
+                display: none;
+            }
+        }
+    }
+    .defense {
+        &__img-item {
+            display: none;
+        }
+        &__img-item-mob {
+            display: block;
+        }
+        &__title {
+            max-width: 300px;
+            margin: 0 auto;
+            margin-bottom: 18px;
+        }
+        &__subtitle {
+            margin-left: 143px;
+        }
+        &__img {
+            margin-top: -165px;
+        }
+        &__device {
+            margin-left: 0;
+            margin-bottom: -70px;
+            img {
+                width: 192px;
+            }
+        }
+        &__captions {
+            bottom: 121px;
+            right: -144px;
+        }
+        &__caption-item {
+            align-items: flex-start;
+            margin-bottom: 15px;
+            &::before {
+                display: none;
+            }
+            span {
+                display: inline-block;
+                max-width: 165px;
+            }
+        }
+    }
+    .device {
+        &__rating {
+            padding-left: 27px;
+        }
+        &__title {
+            font-weight: 600;
+        }
+        &__title-wrapper {
+            margin-right: 0;
+            margin-bottom: 14px;
+        }
+        &__head {
+            display: block;
+        }
+    }
+    .device-cart {
+        flex-wrap: wrap;
+        padding: 26px;
+        margin-bottom: 24px;
+        &__left {
+            margin-bottom: 20px;
+            width: 100%;
+            justify-content: space-between;
+        }
+        &__counter {
+            width: 100%;
+        }
+        &__price {
+            margin-left: 50px;
+        }
+        &__right {
+            width: 100%;
+            text-align: center;
+        }
+        &__btn {
+            width: 100%;
+        }
+    }
+    .device-boxes {
+        margin: 0;
+
+        &__item {
+            width: 100%;
+            margin: 0;
+            margin-bottom: 11px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .contacts {
+        &__phones {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__phones-item {
+            position: relative;
+            margin-left: 0;
+            margin-bottom: 23px;
+            a {
+                position: static;
+                margin-bottom: 5px;
+                &::before {
+                    width: 2px;
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
 }
 @media (max-width: 420px) {
+    .modal {
+        &__title {
+            max-width: 220px;
+        }
+        &__form-item {
+            label {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            span {
+                margin: 0;
+                margin-bottom: 10px;
+                width: auto;
+            }
+        }
+    }
+    .questions__btn {
+        padding: 15px 10px;
+        width: 100%;
+    }
 }
-@media (max-width: 370px) {
+@media (max-width: 380px) {
+    .footer {
+        &__inner {
+            flex-direction: column;
+        }
+    }
+    .hero__benefits-list {
+        max-width: 188px;
+    }
+    .hero {
+        background-size: 890px;
+        background-position: bottom -20px left -492px;
+    }
+    .defense {
+        &__img {
+            margin-left: -50px;
+        }
+        &__subtitle {
+            margin-left: 94px;
+        }
+    }
 }
 
 @media (max-width: 360px) {
@@ -135,4 +1136,12 @@
         }
     }
 } 
+
+@media (max-width: 350px)  {
+    .device-materials {
+        &__item-inner {
+            padding: 14px;
+        }
+    }
+}
 // /Mobile phones

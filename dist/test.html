@@ -65,7 +65,7 @@
     <div class="container">
         <div class="header__inner">
             <a href="./" class="logo header__logo">
-                <img width="147" src="images/dist/logo.svg" alt="Logo">
+                <img width="195" src="images/dist/logo.svg" alt="Logo">
             </a>
             <div class="header__rating">
                 <a href="#" class="header__rating-item header__rating-item--blue">
@@ -119,6 +119,11 @@
         </div>
     </div>
 </header>
+    <style>
+        li {
+            margin: 15px 0;
+        }
+    </style>
     <div class="page-wrapper">
         <main class="main">
             <section class="specialty">
@@ -126,16 +131,20 @@
                     <h1>Страницы:</h1>
                     <ul>
                         <li><a href="index.html">Главная</a></li>
-                        <li><a href="masters.html">Мастера</a></li>
-                        <li><a href="master.html">Мастер</a></li>
+                        <li><a href="device.html">Страница  с устройством</a></li>
+                        <li><a href="works.html">Примеры работ</a></li>
+                        <li><a href="news.html">Новости</a></li>
+                        <li><a href="news-item.html">Новость</a></li>
                         <li><a href="contacts.html">Контакты</a></li>
-                        <li><a href="services.html">Категории услуг</a></li>
-                        <li><a href="services-list.html">Список услуг</a></li>
-                        <li><a href="service.html">Услуга</a></li>
+                        <li><a href="thank.html">Странница Блогадарности</a></li>
                     </ul>
                     <h2>Попапы:</h2>
                     <ul>
-                        <li><button data-micromodal-trigger="modal-1">Popup 1</button></li>
+                        <li><button data-micromodal-trigger="modal-prices">Узнать цену (моб)</button></li>
+                        <li><button data-micromodal-trigger="modal-signup">Записаться на установку бронепленки (моб)</button></li>
+                        <li><button data-micromodal-trigger="modal-error">Ошибка</button></li>
+                        <li><button data-micromodal-trigger="modal-callback">Давайте мы вам перезвоним</button></li>
+                        <li><button data-micromodal-trigger="modal-discounts">Узнай Первым о Скидках на ремонты</button></li>
                     </ul>
                 </div>
             </section>
@@ -144,56 +153,196 @@
 		<footer class="footer">
 			<div class="container">
 				<div class="footer__inner">
-				
+					<div class="footer__item">2021. <a href="#">invisible.md</a></div>
+					<div class="footer__item"><a href="#">Политика конфиденциальности</a></div>
 				</div>
 			</div>
 		</footer>
 	</div>
-	<div class="modal micromodal-slide" id="modal-1">
+	<div class="modal micromodal-slide" id="modal-prices">
     <div class="modal__overlay" tabindex="-1" data-micromodal-close>
         <div class="modal__container">
             <div class="modal__inner">
-                <button class="modal__close" data-micromodal-close aria-label="Close this dialog window">
-                    <svg  data-micromodal-close xmlns="http://www.w3.org/2000/svg" width="30.926" height="31.39" viewBox="0 0 30.926 31.39">
-                        <g  data-micromodal-close   data-name="Group 94" transform="translate(-1479.781 -220.805)">
-                            <line data-micromodal-close  data-name="Line 45" x1="29" y2="30" transform="translate(1480.5 221.5)" fill="none" stroke="#fff" stroke-width="2"/>
-                            <line data-micromodal-close  data-name="Line 46" x2="29" y2="29" transform="translate(1481 222)" fill="none" stroke="#fff" stroke-width="2"/>
-                        </g>
-                    </svg>
-                </button>
                 <div class="modal__content">
-                    <h2 class="lead__title">Будьте красивой вместе с нами</h2>
-                    <div class="lead__text">
-                        Заполните форму заявки и запишитесь на любую процедуру в удобное для вас время. Наш менеджер перезвонит вам в течение  5 минут для уточнения всех деталей
+                    <button class="modal__close" data-micromodal-close aria-label="Close this dialog window">
+                        <svg data-micromodal-close width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path data-micromodal-close d="M7.50008 0.499894C7.39069 0.390536 7.24234 0.329102 7.08766 0.329102C6.93298 0.329102 6.78464 0.390536 6.67524 0.499894L4.00008 3.17506L1.32491 0.499894C1.21552 0.390536 1.06717 0.329102 0.912493 0.329102C0.757814 0.329102 0.609468 0.390536 0.500077 0.499894C0.390719 0.609285 0.329285 0.757631 0.329285 0.91231C0.329285 1.06699 0.390719 1.21534 0.500077 1.32473L3.17524 3.99989L0.500077 6.67506C0.390719 6.78445 0.329285 6.9328 0.329285 7.08748C0.329285 7.24216 0.390719 7.3905 0.500077 7.4999C0.609468 7.60925 0.757814 7.67069 0.912493 7.67069C1.06717 7.67069 1.21552 7.60925 1.32491 7.4999L4.00008 4.82473L6.67524 7.4999C6.78464 7.60925 6.93298 7.67069 7.08766 7.67069C7.24234 7.67069 7.39069 7.60925 7.50008 7.4999C7.60944 7.3905 7.67087 7.24216 7.67087 7.08748C7.67087 6.9328 7.60944 6.78445 7.50008 6.67506L4.82491 3.99989L7.50008 1.32473C7.60944 1.21534 7.67087 1.06699 7.67087 0.91231C7.67087 0.757631 7.60944 0.609285 7.50008 0.499894Z" fill="#343235"/>
+                        </svg>
+                    </button>
+                    <div class="modal__title">
+                        Узнайте сколько стойт Бронепленка
                     </div>
-                    <div class="lead__form-wrapper">
-                        <form class="lead__form" action="#">
-                            <div class="lead__row">
-                                <div class="lead__item">
-                                    <label>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
-                                            <path data-name="Path 124" d="M12.8,9.7a7.471,7.471,0,0,0-2.85-1.788,4.336,4.336,0,1,0-4.907,0A7.512,7.512,0,0,0,0,15H1.172a6.328,6.328,0,1,1,12.656,0H15A7.451,7.451,0,0,0,12.8,9.7ZM7.5,7.5a3.164,3.164,0,1,1,3.164-3.164A3.168,3.168,0,0,1,7.5,7.5Z" transform="translate(0)" fill="#fff"/>
-                                        </svg>
-                                        <input type="text" class="lead__input" placeholder="Как вас зовут?">
-                                    </label>
-                                </div>
-                                <div class="lead__item">
-                                    <label>
-                                        <svg  data-name="Group 30" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
-                                            <path  data-name="Path 128" d="M12.206,35.83a1.478,1.478,0,0,0-1.072-.491,1.529,1.529,0,0,0-1.084.488l-1,1c-.082-.044-.165-.085-.244-.127-.114-.057-.222-.111-.314-.168A10.883,10.883,0,0,1,5.88,34.156a6.413,6.413,0,0,1-.856-1.349c.26-.237.5-.484.736-.722.089-.089.178-.18.266-.269a1.451,1.451,0,0,0,0-2.191l-.866-.864c-.1-.1-.2-.2-.295-.3-.19-.2-.39-.4-.6-.589a1.5,1.5,0,0,0-1.062-.465,1.554,1.554,0,0,0-1.078.465l-.006.006L1.046,28.964a2.315,2.315,0,0,0-.688,1.472,5.543,5.543,0,0,0,.406,2.349,13.627,13.627,0,0,0,2.425,4.04,14.917,14.917,0,0,0,4.968,3.885,7.749,7.749,0,0,0,2.79.823c.067,0,.136.006.2.006a2.391,2.391,0,0,0,1.829-.785c0-.006.01-.009.013-.016a7.2,7.2,0,0,1,.555-.573c.136-.13.276-.266.412-.408a1.578,1.578,0,0,0,.479-1.1,1.52,1.52,0,0,0-.488-1.086Zm1.135,3.334s0,0,0,0c-.124.133-.25.253-.387.386a8.331,8.331,0,0,0-.612.633,1.529,1.529,0,0,1-1.192.5c-.048,0-.1,0-.146,0a6.884,6.884,0,0,1-2.473-.741,14.08,14.08,0,0,1-4.68-3.66,12.849,12.849,0,0,1-2.283-3.8,4.514,4.514,0,0,1-.355-1.982,1.452,1.452,0,0,1,.438-.94l1.081-1.08a.721.721,0,0,1,.482-.225.679.679,0,0,1,.463.222l.01.009c.193.18.377.367.571.567.1.1.2.2.3.307l.866.864a.6.6,0,0,1,0,.981c-.092.092-.181.184-.273.272-.266.272-.52.526-.8.772-.006.006-.013.009-.016.016a.645.645,0,0,0-.165.719l.01.028a6.937,6.937,0,0,0,1.024,1.668l0,0a11.631,11.631,0,0,0,2.815,2.558,4.331,4.331,0,0,0,.39.212c.114.057.222.111.314.168.013.006.025.016.038.022a.688.688,0,0,0,.314.079.678.678,0,0,0,.482-.218l1.084-1.083a.718.718,0,0,1,.479-.237.646.646,0,0,1,.457.231l.006.006,1.747,1.744A.625.625,0,0,1,13.341,39.164Z" transform="translate(-0.344 -26.538)" fill="#fff"/>
-                                            <path  data-name="Path 129" d="M245.3,86.773a4.077,4.077,0,0,1,3.323,3.318.425.425,0,0,0,.422.355.565.565,0,0,0,.073-.006.428.428,0,0,0,.352-.494,4.93,4.93,0,0,0-4.02-4.014.43.43,0,0,0-.495.348A.423.423,0,0,0,245.3,86.773Z" transform="translate(-237.189 -83.205)" fill="#fff"/>
-                                            <path  data-name="Path 130" d="M255.892,6.617a8.118,8.118,0,0,0-6.62-6.61.427.427,0,1,0-.139.842,7.251,7.251,0,0,1,5.916,5.907.425.425,0,0,0,.422.355.566.566,0,0,0,.073-.006A.42.42,0,0,0,255.892,6.617Z" transform="translate(-240.899 0)" fill="#fff"/>
-                                        </svg>
-                                        <input type="text" class="lead__input phone-mask" placeholder="+ 38 ( _ _ _ ) _ _ _-_ _-_ _">
-                                    </label>
-                                </div>
-                                <button class="lead__btn btn btn--white"><span>Я хочу записаться</span></button>
-                            </div>
-                            <div class="lead__policy">
-                                Нажимая на кнопку, вы даете согласие на обработку <a href="#">персональных данных</a>
-                            </div>
-                        </form>
+                    <form action="" class="modal__form">
+                        <div class="modal__select">
+                            <select name="category">
+                                <option value="0" selected disabled>Категория</option>
+                                <option value="1">Категория 1</option>
+                                <option value="2">Категория 2</option>
+                                <option value="3">Категория 3</option>
+                                <option value="4">Категория 4</option>
+                            </select>
+                        </div>
+                        <div class="modal__select">
+                            <select name="device">
+                                <option value="0" selected disabled>Устройство</option>
+                                <option value="1">Устройство 1</option>
+                                <option value="2">Устройство 2</option>
+                                <option value="3">Устройство 3</option>
+                                <option value="4">Устройство 4</option>
+                            </select>
+                        </div>
+                        <div class="modal__select">
+                            <select name="model">
+                                <option value="0" selected disabled>Модель</option>
+                                <option value="1">Модель 1</option>
+                                <option value="2">Модель 2</option>
+                                <option value="3">Модель 3</option>
+                                <option value="4">Модель 4</option>
+                            </select>
+                        </div>
+                        <button class="modal__btn btn">Узнать цену</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal micromodal-slide" id="modal-signup">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container">
+            <div class="modal__inner">
+                <div class="modal__content">
+                    <button class="modal__close" data-micromodal-close aria-label="Close this dialog window">
+                        <svg data-micromodal-close width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path data-micromodal-close d="M7.50008 0.499894C7.39069 0.390536 7.24234 0.329102 7.08766 0.329102C6.93298 0.329102 6.78464 0.390536 6.67524 0.499894L4.00008 3.17506L1.32491 0.499894C1.21552 0.390536 1.06717 0.329102 0.912493 0.329102C0.757814 0.329102 0.609468 0.390536 0.500077 0.499894C0.390719 0.609285 0.329285 0.757631 0.329285 0.91231C0.329285 1.06699 0.390719 1.21534 0.500077 1.32473L3.17524 3.99989L0.500077 6.67506C0.390719 6.78445 0.329285 6.9328 0.329285 7.08748C0.329285 7.24216 0.390719 7.3905 0.500077 7.4999C0.609468 7.60925 0.757814 7.67069 0.912493 7.67069C1.06717 7.67069 1.21552 7.60925 1.32491 7.4999L4.00008 4.82473L6.67524 7.4999C6.78464 7.60925 6.93298 7.67069 7.08766 7.67069C7.24234 7.67069 7.39069 7.60925 7.50008 7.4999C7.60944 7.3905 7.67087 7.24216 7.67087 7.08748C7.67087 6.9328 7.60944 6.78445 7.50008 6.67506L4.82491 3.99989L7.50008 1.32473C7.60944 1.21534 7.67087 1.06699 7.67087 0.91231C7.67087 0.757631 7.60944 0.609285 7.50008 0.499894Z" fill="#343235"/>
+                        </svg>
+                    </button>
+                    <div class="modal__title">
+                        Записаться на установку бронепленки
                     </div>
+                    <form action="" class="modal__form">
+                        <div class="modal__form-item">
+                            <input type="text" placeholder="День">
+                        </div>
+                        <div class="modal__form-item">
+                            <input type="text" placeholder="Время">
+                        </div>
+                        <div class="modal__form-item">
+                            <input class="phone-mask" type="text" placeholder="Номер телефона">
+                        </div>
+                        <button class="modal__btn btn">Записаться</button>
+                        <div class="modal__policy">Нажимая на кнопку, вы даете согласие на обработку данных</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-error micromodal-slide" id="modal-error">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container">
+            <div class="modal__inner">
+                <div class="modal__content">
+                    <button class="modal__close" data-micromodal-close aria-label="Close this dialog window">
+                        <svg data-micromodal-close width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path data-micromodal-close d="M7.50008 0.499894C7.39069 0.390536 7.24234 0.329102 7.08766 0.329102C6.93298 0.329102 6.78464 0.390536 6.67524 0.499894L4.00008 3.17506L1.32491 0.499894C1.21552 0.390536 1.06717 0.329102 0.912493 0.329102C0.757814 0.329102 0.609468 0.390536 0.500077 0.499894C0.390719 0.609285 0.329285 0.757631 0.329285 0.91231C0.329285 1.06699 0.390719 1.21534 0.500077 1.32473L3.17524 3.99989L0.500077 6.67506C0.390719 6.78445 0.329285 6.9328 0.329285 7.08748C0.329285 7.24216 0.390719 7.3905 0.500077 7.4999C0.609468 7.60925 0.757814 7.67069 0.912493 7.67069C1.06717 7.67069 1.21552 7.60925 1.32491 7.4999L4.00008 4.82473L6.67524 7.4999C6.78464 7.60925 6.93298 7.67069 7.08766 7.67069C7.24234 7.67069 7.39069 7.60925 7.50008 7.4999C7.60944 7.3905 7.67087 7.24216 7.67087 7.08748C7.67087 6.9328 7.60944 6.78445 7.50008 6.67506L4.82491 3.99989L7.50008 1.32473C7.60944 1.21534 7.67087 1.06699 7.67087 0.91231C7.67087 0.757631 7.60944 0.609285 7.50008 0.499894Z" fill="#343235"/>
+                        </svg>
+                    </button>
+                    <div class="modal__img">
+                        <svg width="99" height="99" viewBox="0 0 99 99" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="49.5" cy="49.5" r="49" stroke="#FE2C55"/>
+                            <path d="M64.609 32.3909C64.359 32.1409 64.0199 32.0005 63.6664 32.0005C63.3128 32.0005 62.9737 32.1409 62.7237 32.3909L48.9997 46.1149L35.2757 32.3909C35.0257 32.1409 34.6866 32.0005 34.333 32.0005C33.9795 32.0005 33.6404 32.1409 33.3904 32.3909C33.1404 32.6409 33 32.98 33 33.3335C33 33.6871 33.1404 34.0262 33.3904 34.2762L47.1144 48.0002L33.3904 61.7242C33.1404 61.9742 33 62.3133 33 62.6669C33 63.0204 33.1404 63.3595 33.3904 63.6095C33.6404 63.8595 33.9795 63.9999 34.333 63.9999C34.6866 63.9999 35.0257 63.8595 35.2757 63.6095L48.9997 49.8855L62.7237 63.6095C62.9737 63.8595 63.3128 63.9999 63.6664 63.9999C64.0199 63.9999 64.359 63.8595 64.609 63.6095C64.859 63.3595 64.9994 63.0204 64.9994 62.6669C64.9994 62.3133 64.859 61.9742 64.609 61.7242L50.885 48.0002L64.609 34.2762C64.859 34.0262 64.9994 33.6871 64.9994 33.3335C64.9994 32.98 64.859 32.6409 64.609 32.3909Z" fill="#FE2C55"/>
+                        </svg>
+                    </div>
+                    <div class="modal__title">
+                        Ошибка
+                    </div>
+                    <div class="modal__text">
+                        Внутренняя ошибка (шлюз). Пожалуйста позвоните нам.
+                    </div>
+                    <div class="modal__btn-center">
+                        <button class="modal__btn btn" data-micromodal-close="">Ок</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal micromodal-slide" id="modal-callback">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container">
+            <div class="modal__inner">
+                <div class="modal__content">
+                    <button class="modal__close" data-micromodal-close aria-label="Close this dialog window">
+                        <svg data-micromodal-close width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path data-micromodal-close d="M7.50008 0.499894C7.39069 0.390536 7.24234 0.329102 7.08766 0.329102C6.93298 0.329102 6.78464 0.390536 6.67524 0.499894L4.00008 3.17506L1.32491 0.499894C1.21552 0.390536 1.06717 0.329102 0.912493 0.329102C0.757814 0.329102 0.609468 0.390536 0.500077 0.499894C0.390719 0.609285 0.329285 0.757631 0.329285 0.91231C0.329285 1.06699 0.390719 1.21534 0.500077 1.32473L3.17524 3.99989L0.500077 6.67506C0.390719 6.78445 0.329285 6.9328 0.329285 7.08748C0.329285 7.24216 0.390719 7.3905 0.500077 7.4999C0.609468 7.60925 0.757814 7.67069 0.912493 7.67069C1.06717 7.67069 1.21552 7.60925 1.32491 7.4999L4.00008 4.82473L6.67524 7.4999C6.78464 7.60925 6.93298 7.67069 7.08766 7.67069C7.24234 7.67069 7.39069 7.60925 7.50008 7.4999C7.60944 7.3905 7.67087 7.24216 7.67087 7.08748C7.67087 6.9328 7.60944 6.78445 7.50008 6.67506L4.82491 3.99989L7.50008 1.32473C7.60944 1.21534 7.67087 1.06699 7.67087 0.91231C7.67087 0.757631 7.60944 0.609285 7.50008 0.499894Z" fill="#343235"/>
+                        </svg>
+                    </button>
+                    <div class="modal__title">
+                        Давайте мы вам перезвоним
+                    </div>
+                    <form action="" class="modal__form">
+                        <div class="hidden-inputs">
+                            <input type="text" name="deviceDefenseType" id="deviceDefenseType">
+                            <input type="text" name="deviceMaterialType" id="deviceMaterialType">
+                            <input type="text" name="deviceCount" id="deviceCount">
+                            <input type="text" name="devicePrice" id="devicePrice">
+                        </div>
+                        <div class="modal__form-item">
+                            <label>
+                                <span>Привет, меня&nbsp;зовут</span>
+                                <input type="text" placeholder="">
+                            </label>
+                        </div>
+                        <div class="modal__form-item">
+                            <label>
+                                <span>Мой номер телефона</span>
+                                <input class="phone-mask" type="text" placeholder="">
+                            </label>
+                        </div>
+                        <div class="modal__btn-right">
+                            <button class="modal__btn btn">Перезвоните мне</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-discounts micromodal-slide" id="modal-discounts">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container">
+            <div class="modal__inner">
+                <div class="modal__content">
+                    <button class="modal__close" data-micromodal-close aria-label="Close this dialog window">
+                        <svg data-micromodal-close width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path data-micromodal-close d="M7.50008 0.499894C7.39069 0.390536 7.24234 0.329102 7.08766 0.329102C6.93298 0.329102 6.78464 0.390536 6.67524 0.499894L4.00008 3.17506L1.32491 0.499894C1.21552 0.390536 1.06717 0.329102 0.912493 0.329102C0.757814 0.329102 0.609468 0.390536 0.500077 0.499894C0.390719 0.609285 0.329285 0.757631 0.329285 0.91231C0.329285 1.06699 0.390719 1.21534 0.500077 1.32473L3.17524 3.99989L0.500077 6.67506C0.390719 6.78445 0.329285 6.9328 0.329285 7.08748C0.329285 7.24216 0.390719 7.3905 0.500077 7.4999C0.609468 7.60925 0.757814 7.67069 0.912493 7.67069C1.06717 7.67069 1.21552 7.60925 1.32491 7.4999L4.00008 4.82473L6.67524 7.4999C6.78464 7.60925 6.93298 7.67069 7.08766 7.67069C7.24234 7.67069 7.39069 7.60925 7.50008 7.4999C7.60944 7.3905 7.67087 7.24216 7.67087 7.08748C7.67087 6.9328 7.60944 6.78445 7.50008 6.67506L4.82491 3.99989L7.50008 1.32473C7.60944 1.21534 7.67087 1.06699 7.67087 0.91231C7.67087 0.757631 7.60944 0.609285 7.50008 0.499894Z" fill="#343235"/>
+                        </svg>
+                    </button>
+                    <div class="modal__title">
+                        Узнай Первым о Скидках на ремонты
+                    </div>
+                    <form action="" class="modal__form">
+                        <div class="modal__form-item">
+                            <label>
+                                <span>Привет, меня&nbsp;зовут</span>
+                                <input type="text" placeholder="">
+                            </label>
+                        </div>
+                        <div class="modal__form-item">
+                            <label>
+                                <span>Мой номер телефона</span>
+                                <input class="phone-mask" type="text" placeholder="">
+                            </label>
+                        </div>
+                        <div class="modal__btn-right">
+                            <button class="modal__btn btn">Перезвоните мне</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

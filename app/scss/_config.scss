@@ -61,13 +61,17 @@ h1,h2,h3,h4,h5,h6 {
     margin: 0;
 }
 
+p {
+    margin: 30px 0;
+}
+
 .title {
     font-weight: bold;
     font-size: 40px;
     line-height: 56px;
 
     &--sm {
-        font-weight: 600;
+        font-weight: 500;
         font-size: 36px;
         line-height: 68px;
     }
@@ -188,6 +192,7 @@ a {
 
 .main {
     flex: 1 1 auto;
+    padding-top: 90px;
 }
 
 .socials {
@@ -238,7 +243,7 @@ a {
     display: inline-block;
     font-size: 20px;
     font-weight: bold;
-    padding: 15px 45px;
+    padding: 15px 40px;
     text-align: center;
     color: inherit;
     text-decoration: none;
@@ -249,33 +254,81 @@ a {
     border: none;
     background-color: $accent;
     color: $white;
+    border-radius: 10px;
 }
 
-.breadcrumbs {
-    margin-bottom: 50px;
-    li {
-        display: inline;
-        line-height: 1.7;
-        &:hover {
-            text-decoration: underline;
+.hidden-inputs {
+    display: none;
+}
+
+.box-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 80px;
+    padding-right: 47px;
+    background-color: $bg;
+    border-radius: 10px;
+    flex-wrap: wrap;
+
+    &__text {
+        font-size: 24px;
+        line-height: 40px;
+
+        strong, b {
+            font-weight: 700;
         }
-        & + li {
-            margin-left: 20px;
-            padding-left: 20px;
-            position: relative;
-            &::before {
-                position: absolute;
-                content: "";
-                left: 0;
-                top: 0;
-                background-color: $main;
-                height: 22px;
-                transform: rotate(25deg);
-                width: 1px;
+
+        p {
+            &:last-child {
+                margin-bottom: 0;
             }
         }
-        &:last-child {
-            color: #787676;
+    }
+
+    &__content {
+        width: calc(50% - 45px);
+        margin-right: 90px;
+    }
+    &__video {
+        position: relative;
+        width: calc(50% - 45px);
+    }
+    &__btn {
+        position: absolute;
+        left: -25px;
+        top: -40px;
+        display: flex;
+        align-items: center;
+        background-color: #1706E1;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: 20px;
+        padding: 20px 30px;
+
+        span {
+            margin-left: 7px;
+            color: $white;
         }
     }
+    &__img {
+        display: block;
+        img {
+            width: 100%;
+            border-radius: 5px;
+            display: flex;
+        }
+    }
+}
+
+.more-wrapper {
+    &.active {
+        .more-item--hidden {
+            display: block;
+        }
+    }
+}
+
+.more-item--hidden {
+    display: none;
 }

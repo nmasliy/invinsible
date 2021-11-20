@@ -1,0 +1,110 @@
+.hero {
+    background: url('../images/dist/hero-bg.png') bottom -250px left -100px no-repeat;
+    padding-top: 20px;
+
+    &__form-btn-modal {
+        display: none;
+        min-width: 258px;
+        border-radius: 5px;
+    }
+    
+    &__subtitle {
+        font-size: 18px;
+        line-height: 111%;
+        margin-bottom: 90px;
+        text-align: center;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    &__head {
+        max-width: 1180px;
+        margin: 0 auto;
+    }
+    
+    &__form {
+        max-width: 930px;
+        margin: 0 auto;
+        margin-bottom: 35px;
+
+        form {
+            display: flex;
+            margin: 0 -10px;
+        }
+    }
+
+    &__caption {
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    &__form-select {
+        position: relative;
+        width: calc(25% - 20px);
+        margin: 0 10px;
+
+        select {
+            background-image: url("data:image/svg+xml,%3Csvg width='12' height='6' viewBox='0 0 12 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.99985 5.62502C5.8029 5.62537 5.60781 5.58678 5.42582 5.51149C5.24382 5.43619 5.0785 5.32567 4.93935 5.18627L0.969604 1.21577L2.0301 0.155273L5.99985 4.12502L9.9696 0.155273L11.0301 1.21577L7.06035 5.18552C6.92127 5.32505 6.75598 5.43571 6.57398 5.51114C6.39198 5.58656 6.19686 5.62527 5.99985 5.62502Z' fill='%23374957'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-position: right 17px center;
+            background-color: $white;
+            display: block;
+            width: 100%;
+            border-radius: 5px;
+            padding: 16px 22px;
+            font-size: 14px;
+            color: rgba(52, 50, 53, 0.66);
+            border: none;
+            appearance: none;
+            min-height: 63px;
+            outline: transparent;
+            cursor: pointer;
+        }
+    }
+
+    &__form-btn {
+        width: calc(23% - 20px);
+        margin: 0 10px;
+        flex-shrink: 0;
+        border-radius: 5px;
+    }
+
+
+    &__benefits {
+        min-height: 700px;
+        padding-top: 138px;
+    }
+
+    &__benefits-list {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: 187px;
+    }
+
+    &__benefits-item {
+        margin: 35px;
+        width: calc(50% - 70px);
+        svg {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__benefits-title {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    &__benefits-text {
+        font-size: 14px;
+        line-height: 19px;
+        color: rgba(0, 0, 0, 0.64);
+    }
+}

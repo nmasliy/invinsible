@@ -1,0 +1,32 @@
+.gallery {
+    background-color: $white;
+    &__title {
+        max-width: 685px;
+        margin-bottom: 40px;
+    }
+
+    &__subtitle {
+        display: flex;
+        align-items: center;
+        margin-bottom: 45px;
+        svg {
+            flex-shrink: 0;
+        }
+        span {
+            display: inline-block;
+            margin-left: 16px;
+            font-size: 20px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px -10px;
+    }
+
+    &__item {
+        margin: 15px 10px;
+        width: calc(20% - 20px);
+    }
+}
