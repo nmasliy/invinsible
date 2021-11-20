@@ -321,14 +321,25 @@ a {
     }
 }
 
-.more-wrapper {
-    &.active {
-        .more-item--hidden {
-            display: block;
-        }
-    }
+.more-btn {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    color: #1706E1;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #1706E1;
 }
 
-.more-item--hidden {
-    display: none;
+.more-wrapper {
+    &.active {
+        .more-item {
+            display: block !important;
+        }
+        .more-item--hidden {
+            display: block !important;
+        }
+    }
+    .more-item--hidden {
+        display: none;
+    }
 }

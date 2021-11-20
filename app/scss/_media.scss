@@ -50,6 +50,7 @@
 }
 
 @media (max-width: 1280px) {
+
     .defense {
         &__device {
             margin-left: -200px;
@@ -88,6 +89,11 @@
     }
 }
 @media (max-width: 1200px) {
+    .news {
+        &__item {
+            width: calc(50% - 20px);
+        }
+    }
     .device-slider {
         height: 400px;
     }
@@ -186,7 +192,12 @@
             font-size: 24px;
             line-height: 35px;
         }
-
+    }
+    .news__title,
+    .works__title {
+        font-size: 24px;
+        line-height: 29px;
+        font-weight: 600;
     }
     .reviews__title {
         font-size: 24px;
@@ -247,6 +258,50 @@
 
 // Tablets 
 @media (max-width: 1024px) {
+    .news {
+        padding-bottom: 30px;
+        &__list {
+            margin: -10px;
+            padding-bottom: 38px;
+        }
+        &__top {
+            svg {
+                width: 12px;
+                height: auto;
+            }
+            span {
+                font-size: 10px;
+            }
+        }
+        &__img {
+            min-height: 190px;
+            margin-bottom: 12px;
+        }
+        &__name {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        &__text {
+            font-size: 12px;
+            line-height: 18px;
+        }
+        &__item {
+            margin: 10px;
+            padding: 12px;
+            padding-bottom: 22px;
+            &:nth-child(6) ~ .news__item {
+                display: none;
+            }
+        }
+    }
+    .works {
+        &__item {
+            width: calc(50% - 20px);
+            &:nth-child(6) ~ .works__item {
+                display: none;
+            }
+        }
+    }
     .gallery {
         &__title {
             margin-bottom: 15px;
@@ -669,6 +724,17 @@
 }
 
 @media (max-width: 768px) {
+    .news {
+        &__img {
+            img {
+                height: 200px;
+            }
+        }
+    }
+    .more-btn {
+        font-size: 12px;
+        padding-bottom: 6px;
+    }
     .gallery {
         &__item {
             width: calc(33.3333% - 12px);
@@ -854,6 +920,12 @@
 }
 
 @media (max-width: 700px) {
+    .works {
+        &__name {
+            font-weight: 600;
+            font-size: 14px;
+        }
+    }
     .garanty__box-btn {
         padding: 12px;
     }
@@ -875,6 +947,19 @@
 @media (max-width: 640px) {
 }
 @media(max-width: 600px) {
+    .news {
+        &__list {
+            margin: 0;
+        }
+        &__item {
+            width: 100%;
+            margin: 0;
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
     .contacts {
         &__foot {
             flex-direction: column;
@@ -960,6 +1045,27 @@
 
 // Mobile phones
 @media (max-width: 480px) {
+    .works {
+        padding-bottom: 30px;
+        &__item {
+            width: 100%;
+            margin: 0;
+            margin-bottom: 18px;
+        }
+        &__list {
+            margin: 0;
+            margin-bottom: 44px;
+        }
+        &__title {
+            margin-bottom: 20px;
+        }
+        &__img {
+            padding: 12px;
+            img {
+                width: 100%;
+            }
+        }
+    }
     .gallery {
         &__item {
             width: calc(50% - 12px);

@@ -142,11 +142,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     e.preventDefault();
 
                     if (item.closest('.more-wrapper').classList.contains('active')) {
-                        item.textContent = '+ Смотреть ещё';
+                        item.textContent = item.dataset.text;
                         item.closest('.more-wrapper').classList.remove('active');
                     }
                     else {
-                        item.textContent = '- Показать меньше';
+                        item.textContent = item.dataset.textActive;
                         item.closest('.more-wrapper').classList.add('active');
                     }
                 })
