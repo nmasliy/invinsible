@@ -1,5 +1,8 @@
 .footer {
     padding-bottom: 44px;
+    &--white {
+        background-color: $white;
+    }
     &__inner {
         display: flex;
         flex-wrap: wrap;

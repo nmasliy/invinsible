@@ -343,3 +343,18 @@ a {
         display: none;
     }
 }
+
+.side-line {
+    position: relative;
+    &::before {
+        position: absolute;
+        content: "";
+        left: -18px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #1706E1;
+        border-radius: 10px;
+        width: 3px;
+        height: 80%;
+    }
+}

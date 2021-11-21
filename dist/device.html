@@ -820,7 +820,7 @@
                     </div>
                     <form action="" class="modal__form">
                         <div class="modal__select">
-                            <select name="category">
+                            <select name="category" id="categoryMobileSelect">
                                 <option value="0" selected disabled>Категория</option>
                                 <option value="1">Категория 1</option>
                                 <option value="2">Категория 2</option>
@@ -829,7 +829,7 @@
                             </select>
                         </div>
                         <div class="modal__select">
-                            <select name="device">
+                            <select name="device" id="deviceMobileSelect">
                                 <option value="0" selected disabled>Устройство</option>
                                 <option value="1">Устройство 1</option>
                                 <option value="2">Устройство 2</option>
@@ -838,7 +838,7 @@
                             </select>
                         </div>
                         <div class="modal__select">
-                            <select name="model">
+                            <select name="model" id="modelMobileSelect">
                                 <option value="0" selected disabled>Модель</option>
                                 <option value="1">Модель 1</option>
                                 <option value="2">Модель 2</option>
@@ -973,6 +973,11 @@
                         Узнай Первым о Скидках на ремонты
                     </div>
                     <form action="" class="modal__form">
+                        <div class="hidden-inputs">
+                            <input type="text" name="categorySelectInput" id="categorySelectInput">
+                            <input type="text" name="deviceSelectInput" id="deviceSelectInput">
+                            <input type="text" name="modelSelectInput" id="modelSelectInput">
+                        </div>
                         <div class="modal__form-item">
                             <label>
                                 <span>Привет, меня&nbsp;зовут</span>

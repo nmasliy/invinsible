@@ -15,7 +15,7 @@
 							<div class="hero__caption">Узнайте сколько стойт Бронепленка</div>
 							<form action="#">
 								<div class="hero__form-select">
-									<select name="category">
+									<select name="category" id="categorySelect">
 										<option value="0" selected disabled>Категория</option>
 										<option value="1">Категория 1</option>
 										<option value="2">Категория 2</option>
@@ -24,7 +24,7 @@
 									</select>
 								</div>
 								<div class="hero__form-select">
-									<select name="device">
+									<select name="device" id="deviceSelect">
 										<option value="0" selected disabled>Устройство</option>
 										<option value="1">Устройство 1</option>
 										<option value="2">Устройство 2</option>
@@ -33,7 +33,7 @@
 									</select>
 								</div>
 								<div class="hero__form-select">
-									<select name="model">
+									<select name="model" id="modelSelect">
 										<option value="0" selected disabled>Модель</option>
 										<option value="1">Модель 1</option>
 										<option value="2">Модель 2</option>
@@ -42,6 +42,8 @@
 									</select>
 								</div>
 								<button class="hero__form-btn btn">Узнать цену</button>
+
+								<button class="btn" data-micromodal-trigger="modal-discounts">modal-discounts</button>
 								<button class="hero__form-btn-modal btn" data-micromodal-trigger="modal-prices">Узнать цену</button>
 							</form>
 						</div>

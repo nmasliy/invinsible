@@ -228,6 +228,46 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    function initSelectsSubmit() {
+        const $heroFormBtn = document.querySelector('.hero__form-btn');
+        const $mobileFormBtn = document.querySelector('#modal-prices .modal__btn');
+
+        const $categorySelectInput = document.querySelector('#categorySelectInput');
+        const $deviceSelectInput = document.querySelector('#deviceSelectInput');
+        const $modelSelectInput = document.querySelector('#modelSelectInput');
+
+        if ($heroFormBtn) {
+
+            if (window.innerWidth <= 1024) {
+                $mobileFormBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const categoryValue = document.querySelector('#categoryMobileSelect').value;
+                    const deviceValue = document.querySelector('#deviceMobileSelect').value;
+                    const modelValue = document.querySelector('#modelMobileSelect').value;
+
+                    $categorySelectInput.value = categoryValue;
+                    $deviceSelectInput.value = deviceValue;
+                    $modelSelectInput.value = modelValue;
+                })
+
+            } else {
+                $heroFormBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+    
+                    const categoryValue = document.querySelector('#categorySelect').value;
+                    const deviceValue = document.querySelector('#deviceSelect').value;
+                    const modelValue = document.querySelector('#modelSelect').value;
+                    
+                    $categorySelectInput.value = categoryValue;
+                    $deviceSelectInput.value = deviceValue;
+                    $modelSelectInput.value = modelValue;
+                })
+            }
+            
+        }
+    }
+
     disableTransitionsBeforePageLoading();
     initMenu();
 
@@ -240,4 +280,5 @@ document.addEventListener("DOMContentLoaded", function () {
     initQuestionsAccordion();
     initDeviceSlider();
     initCartSubmit();
+    initSelectsSubmit();
 });

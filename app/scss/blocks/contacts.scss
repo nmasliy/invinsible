@@ -122,4 +122,96 @@
             border-radius: 10px;
         }
     }
+
+    &__caption {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 36px;
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__schedule {
+        margin-bottom: 53px;
+    }
+
+    &__schedule-title {
+        font-size: 12px;
+        color: rgba(52, 50, 53, 0.66);
+        margin-bottom: 16px;
+    }
+    &__schedule-list {
+        display: flex;
+    }
+    &__schedule-item {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 36px;
+        margin-left: 47px;
+        &:first-child {
+            margin-left: 0;
+        }
+        &.side-line {
+            padding-left: 12px;
+            &::before {
+                left: 0;
+                width: 3px;
+            }
+        }
+    }
+}
+
+
+.contacts-page {
+    .contacts {
+        background-color: $white;
+        padding: 53px;
+        border-radius: 10px;
+        &__content {
+            width: 57%;
+        }
+        &__map {
+            margin-left: 50px;
+            width: calc(43% - 50px);
+        }
+    }
+}
+
+.consultation {
+    padding-top: 78px;
+    padding-bottom: 115px;
+    display: flex;
+    justify-content: space-between;
+
+    .contacts__map {
+        display: none;
+    }
+    
+    &__info {
+        width: calc(68% - 100px);
+        margin-right: 100px;
+    }
+
+    &__title {
+        margin-bottom: 22px;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 36px;
+    }
+
+    &__address-text {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 36px;
+        max-width: 820px;
+        padding-left: 22px;
+    }
+
+    &__img {
+        img {
+            border-radius: 10px;
+            max-height: 595px;
+        }
+    }
 }

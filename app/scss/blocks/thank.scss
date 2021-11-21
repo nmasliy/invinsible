@@ -1,0 +1,93 @@
+.thank {
+    padding-bottom: 200px;
+    padding-top: 100px;
+    min-height: 100vh;
+    background: url('../images/dist/thank.png') right 175px bottom no-repeat;
+
+    &__inner {
+        padding-left: 130px;
+    }
+
+    &__logo {
+        margin-bottom: 70px;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 64px;
+        line-height: 84px;
+        margin-bottom: 23px;
+        div {
+            font-weight: bold;
+            font-size: 56px;
+            line-height: 84px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 24px;
+        line-height: 38px;
+        margin-bottom: 34px;
+        font-weight: 400;
+        max-width: 450px;
+    }
+}
+
+.buy-also {
+    background-color: $white;
+    padding-top: 72px;
+    padding-bottom: 107px;
+    &__list {
+        margin: -11px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: calc(33.333% - 22px);
+        margin: 11px;
+        background-color: $bg;
+        border-radius: 10px;
+
+        a {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            padding: 42px;
+            padding-bottom: 30px;
+        }
+    }
+
+    &__head {
+        display: flex;
+        align-items: center;
+        margin-bottom: 43px;
+        svg {
+            flex-shrink: 0;
+        }
+        span {
+            display: inline-block;
+            margin-left: 30px;
+            font-size: 30px;
+            line-height: 37px;
+        }
+    }
+
+    &__price {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 40px;
+        text-align: center;
+        margin-top: auto;
+        b {
+            font-size: 48px;
+            line-height: 1;
+            font-weight: 600;
+        }
+    }
+
+    &__title {
+        max-width: 540px;
+        margin-bottom: 47px;
+    }
+}
